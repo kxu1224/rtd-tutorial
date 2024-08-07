@@ -1,6 +1,6 @@
 Methods
 =====
 
-.. automodule:: python
+.. automodule:: syng_bts.python
    :members:
    :undoc-members:
