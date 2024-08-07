@@ -1,4 +1,6 @@
 Methods
 =====
 
-.. autoclass:: lumache
+.. automodule:: python
+   :members:
+   :undoc-members:
