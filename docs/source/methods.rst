@@ -20,7 +20,7 @@ ApplyExperiment
 To retrieve a list of random ingredients,
 you can use the ``lumache.get_random_ingredients()`` function:
 
-.. autofunction:: testing.python.Experiments_new.PilotExperiment
+.. autofunction:: testing.python.Temp.PilotExperiment
 
 The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
 or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
