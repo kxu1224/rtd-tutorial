@@ -16,3 +16,12 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
 # pre_model:         transfer learning input model. If pre_model == None, no transfer learning
     print("Pilot Experiment Start")
     return None
+
+from Experiments_new import *
+
+# run pilot experiments
+PilotExperiment(dataname = "SKCMPositive_4", pilot_size = [100],
+                model = "VAE1-10", batch_frac = 0.1, 
+                learning_rate = 0.0005, pre_model = None,
+                epoch = None,  off_aug = None, early_stop_num = 30,
+                AE_head_num = 2, Gaussian_head_num = 9)
