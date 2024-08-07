@@ -44,11 +44,11 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
     path = "../RealData/"+dataname+".csv"
 
     # just use an if statement for datasets that are already built in
-    if dataname == 'SKCMPositive_4':
-        with pkg_resources.open_text('syng_bts_imports.RealData', 'SKCMPositive_4.csv') as data_file:
-            df = pd.read_csv(data_file)
-    else:
-        df = pd.read_csv(path, header = 0)
+    # if dataname == 'SKCMPositive_4':
+    #     with pkg_resources.open_text('syng_bts_imports.RealData', 'SKCMPositive_4.csv') as data_file:
+    #         df = pd.read_csv(data_file)
+    # else:
+    df = pd.read_csv(path, header = 0)
     dat_pd = df
     data_pd = dat_pd.select_dtypes(include=np.number)
     oridata = torch.from_numpy(data_pd.to_numpy()).to(torch.float32)
