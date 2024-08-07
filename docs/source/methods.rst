@@ -1,26 +1,41 @@
 Methods
 =====
 
-.. autoclass:: lumache
-   :members:
+.. _pilot:
 
-   {% block functions %}
-   {% if functions %}
+PilotExperiment
+------------
 
-   Functions
-   ---------
+To use Lumache, first install it using pip:
 
-   {% for item in functions %}
+.. code-block:: console
 
-   .. autofunction:: {{ item }}
+   (.venv) $ pip install lumache
+
+.. _apply:
+
+ApplyExperiment
+----------------
+
+To retrieve a list of random ingredients,
+you can use the ``lumache.get_random_ingredients()`` function:
+
+.. autofunction:: lumache.get_random_ingredients
+
+The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
+or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
+will raise an exception.
+
+.. autoexception:: lumache.InvalidKindError
+
+For example:
+
+>>> import lumache
+>>> lumache.get_random_ingredients()
+['shells', 'gorgonzola', 'parsley']
 
 
-   .. include:: backreferences/{{fullname}}.{{item}}.examples
+.. _transfer:
 
-   .. raw:: html
-
-               <div class="sphx-glr-clear"></div>
-
-   {%- endfor %}
-   {% endif %}
-   {% endblock %}
+Transfer
+----------------
