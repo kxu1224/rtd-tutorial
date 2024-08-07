@@ -1,9 +1,7 @@
 Methods
 =====
 
-.. automodule::syng_bts/python
-
-.. autofunction::PilotExperiment
+.. automethod:: syng_bts.python.Experiments_new.PilotExperiment
 
 .. _pilot:
 
