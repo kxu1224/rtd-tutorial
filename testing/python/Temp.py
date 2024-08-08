@@ -9,11 +9,14 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
         ----------
         dataname : string
                    pure data name without .csv. Eg: SKCMPositive_3
-        pilot_size : set
-                     a set including potential pilot sizes
-        model : name of the model to be trained
-        batch_frac :        batch fraction
-        learning_rate :     learning rate 
+        pilot_size : list
+                     a list including potential pilot sizes
+        model : string
+                name of the model to be trained
+        batch_frac : float
+                      batch fraction
+        learning_rate : float
+                learning rate 
         epoch :             choose from None (early_stop), or any integer, if choose None, early_stop_num will take effect
         early_stop_num :    if loss does not improve for early_stop_num epochs, the training will stop. Default value is 30. Only take effect when epoch == "early_stop"
         off_aug :           choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation
