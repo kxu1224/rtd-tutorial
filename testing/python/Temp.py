@@ -1,5 +1,5 @@
 def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoch, early_stop_num = 30, off_aug = None, AE_head_num = 2, Gaussian_head_num = 9, pre_model = None):
-    """ 
+    r""" 
         This function trains VAE or CVAE, or GAN, WGAN, WGANGP, MAF, GLOW, RealNVP 
         with several pilot size given data, model, batch_size, learning_rate, epoch, off_aug and pre_model
         for each pilot size, there will be 5 draws, for each draw, the data is augmented to 5 times the original sample size.
