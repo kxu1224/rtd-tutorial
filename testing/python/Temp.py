@@ -36,22 +36,36 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
 
 #%% Define application of experiment
 def ApplyExperiment(path, dataname, apply_log, new_size, model, batch_frac, learning_rate, epoch, early_stop_num = 30, off_aug = None, AE_head_num = 2, Gaussian_head_num = 9, pre_model = None, save_model = None):
-# This function trains VAE or CVAE, or GAN, WGAN, WGANGP, MAF, GLOW, RealNVP 
-#      given data, model, batch_size, learning_rate, epoch, off_aug and pre_model
-#      and generate new samples with size specified by the users.
-# path:              path for reading real data and saving new data
-# dataname :         pure data name without .csv. Eg: SKCMPositive_3
-# apply_log:         logical whether apply log transformation before training
-# model:             name of the model to be trained
-# batch_frac:        batch fraction
-# learning_rate:     learning rate 
-# epoch:             choose from None (early_stop), or any interger, if choose None, early_stop_num will take effect
-# early_stop_num:    if loss does not improve for early_stop_num epochs, the training will stop. Default value is 30. Only take effect when epoch == "early_stop"
-# off_aug:           choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation
-# AE_head_num:       how many folds of AEhead augmentation needed. Default value is 2, Only take effect when off_aug == "AE_head"
-# Gaussian_head_num: how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
-# pre_model:         transfer learning input model. If pre_model == None, no transfer learning
-# save_model:        if the trained model should be saved, specify the path and name of the saved model
+    r"""
+    This function trains VAE or CVAE, or GAN, WGAN, WGANGP, MAF, GLOW, RealNVP 
+        given data, model, batch_size, learning_rate, epoch, off_aug and pre_model
+        and generate new samples with size specified by the users.
+
+    Parameters
+    ----------
+    path : string
+                              path for reading real data and saving new data
+    dataname : string
+                    pure data name without .csv. Eg: SKCMPositive_3
+    apply_log : boolean         logical whether apply log transformation before training
+    model : string             name of the model to be trained
+    batch_frac : float
+                    batch fraction
+    learning_rate : float
+              learning rate 
+    epoch : int
+                              choose from None (early_stop), or any interger, if choose None, early_stop_num will take effect
+    early_stop_num : int    if loss does not improve for early_stop_num epochs, the training will stop. Default value is 30. Only take effect when epoch == "early_stop"
+    off_aug : string (AE_head or Gaussian_head or None)          choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation
+    AE_head_num : int       how many folds of AEhead augmentation needed. Default value is 2, Only take effect when off_aug == "AE_head"
+    Gaussian_head_num : int
+         how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
+    pre_model : string
+                      transfer learning input model. If pre_model == None, no transfer learning
+    save_model : string
+                    if the trained model should be saved, specify the path and name of the saved model
+    """
+    
     print("Apply Experiment Start")
     return None
 
