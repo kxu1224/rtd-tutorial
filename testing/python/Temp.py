@@ -17,12 +17,18 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
                       batch fraction
         learning_rate : float
                 learning rate 
-        epoch :             choose from None (early_stop), or any integer, if choose None, early_stop_num will take effect
-        early_stop_num :    if loss does not improve for early_stop_num epochs, the training will stop. Default value is 30. Only take effect when epoch == "early_stop"
-        off_aug :           choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation
-        AE_head_num :       how many folds of AEhead augmentation needed. Default value is 2, Only take effect when off_aug == "AE_head"
-        Gaussian_head_num : how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
-        pre_model :         transfer learning input model. If pre_model == None, no transfer learning 
+        epoch : int
+                                choose from None (early_stop), or any integer, if choose None, early_stop_num will take effect
+        early_stop_num : int
+              if loss does not improve for early_stop_num epochs, the training will stop. Default value is 30. Only take effect when epoch == "early_stop"
+        off_aug : string (AE_head or Gaussian_head or None)
+                            choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation
+        AE_head_num : int
+                    how many folds of AEhead augmentation needed. Default value is 2, Only take effect when off_aug == "AE_head"
+        Gaussian_head_num : int
+        how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
+        pre_model : string
+                        transfer learning input model. If pre_model == None, no transfer learning 
 
     """
     print("Pilot Experiment Start")
