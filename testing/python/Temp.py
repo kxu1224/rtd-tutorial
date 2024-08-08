@@ -26,7 +26,7 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
         AE_head_num : int
                     how many folds of AEhead augmentation needed. Default value is 2, Only take effect when off_aug == "AE_head"
         Gaussian_head_num : int
-        how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
+                how many folds of Gaussianhead augmentation needed. Default value is 9, Only take effect when off_aug == "Gaussian_head"
         pre_model : string
                         transfer learning input model. If pre_model == None, no transfer learning 
 
