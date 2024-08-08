@@ -1,10 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to Syng-Bts documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Syng-Bts** SyNG-BTS is a data augmentation tool synthesizing transcriptomics data with realistic distributions without relying on a predefined formula. Three deep generative models are considered, incluing Variational Auto Encoder (VAE), Generative Adversarial Network (GAN), and flow-based generative model. Those models will be trained on a pilot dataset and then utilized to generate data for any desired number of samples.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
@@ -19,5 +16,4 @@ Contents
 .. toctree::
 
    usage
-   api
    methods
