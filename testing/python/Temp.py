@@ -2,8 +2,10 @@ def PilotExperiment(dataname, pilot_size, model, batch_frac, learning_rate, epoc
     """ 
         This function trains VAE or CVAE, or GAN, WGAN, WGANGP, MAF, GLOW, RealNVP 
         with several pilot size given data, model, batch_size, learning_rate, epoch, off_aug and pre_model
-        for each pilot size, there will be 5 draws, 
-        for each draw, the data is augmented to 5 times the original sample size.
+        for each pilot size, there will be 5 draws, for each draw, the data is augmented to 5 times the original sample size.
+
+        Parameters
+        ----------
         dataname :         pure data name without .csv. Eg: SKCMPositive_3
         pilot_size:        a set including potential pilot sizes
         model:             name of the model to be trained
