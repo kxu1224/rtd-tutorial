@@ -35,13 +35,13 @@ For example:
 
 .. _transfer:
 
-Transfer
+TransferExperiment
 ----------------
 
 .. autofunction:: testing.python.Temp.Transfer
 
 For example:
 
->>> Transfer(pilot_size = None, fromname = "PRAD", toname = "BRCA", fromsize = 551, 
+>>> TransferExperiment(pilot_size = None, fromname = "PRAD", toname = "BRCA", fromsize = 551, 
 >>>         new_size = 500, apply_log = True, model = "maf", epoch = 10,
 >>>         batch_frac = 0.1, learning_rate = 0.0005, off_aug = None)

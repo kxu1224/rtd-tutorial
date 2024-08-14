@@ -6,7 +6,7 @@ Usage
 Installation
 ------------
 
-To use Syng-Bts, first install it using pip:
+To use SyNG-BTS, first install it using pip:
 
 .. code-block:: console
 
