@@ -75,7 +75,7 @@ def ApplyExperiment(path, dataname, apply_log, new_size, model, batch_frac, lear
     return None
 
 #%% Define transfer learing 
-def Transfer(pilot_size, fromname, toname, fromsize, model, new_size=500, apply_log=True, epoch=None, batch_frac=0.1, learning_rate=0.0005, off_aug=None):
+def TransferExperiment(pilot_size, fromname, toname, fromsize, model, new_size=500, apply_log=True, epoch=None, batch_frac=0.1, learning_rate=0.0005, off_aug=None):
     """
         This function run transfer learning using VAE or CVAE, or GAN, WGAN, WGANGP, MAF, GLOW, RealNVP 
         given fromdata, todata, model, batch_size, learning_rate, epoch, off_aug and pre_model
@@ -110,4 +110,49 @@ def Transfer(pilot_size, fromname, toname, fromsize, model, new_size=500, apply_
                           choose from AE_head, Gaussian_head, None. if choose AE_head, AE_head_num will take effect. If choose Gaussian_head, Gaussian_head_num will take effect. If choose None, no offline augmentation"""
 
     print("Transfer Learning Start")
+    return None
+
+def heatmap_eval(dat_generated, dat_real):
+    r"""
+    This function creates a heatmap visualization comparing the generated data and the real data
+
+    Parameters
+    -----------
+    dat_generated : pd.DataFrame
+            the data generated from ApplyExperiment
+    dat_real: pd.DataFrame
+            the original copy of the data
+    
+    """
+    print("heatmap")
+    return None
+
+def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos="top"):
+    r"""
+    This function creates a UMAP visualization comparing the generated data and the real data
+
+    Parameters
+    -----------
+    dat_generated : pd.DataFrame
+            the data generated from ApplyExperiment
+    dat_real: pd.DataFrame
+            the original copy of the data
+    
+    """
+    print("umap")
+    return None
+
+def evaluation(generated_input: str = "BRCASubtypeSel_train_epoch285_CVAE1-20_generated.csv", 
+               real_input: str = "BRCASubtypeSel_test.csv"):
+    r"""
+    This method provides preprocessing of the input data prior to creating the visualizations.
+    This can also be used as inspiration for other ways of using the above evaluation methods.
+
+    generated_input : string
+        the generated dataset; a default set is also provided as an example
+    real_input : string
+        the real original dataset; a default set is also provided as an example
+    
+    """
+    print("evals!")
     return None
