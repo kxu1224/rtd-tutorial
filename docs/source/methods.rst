@@ -6,7 +6,7 @@ Methods
 PilotExperiment
 ------------
 
-.. autofunction:: testing.python.Temp.PilotExperiment
+.. autofunction:: {{ testing.python.Temp.PilotExperiment }}
 
 For example:
 
