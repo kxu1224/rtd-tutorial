@@ -38,7 +38,7 @@ For example:
 TransferExperiment
 ----------------
 
-.. autofunction:: testing.python.Temp.Transfer
+.. autofunction:: testing.python.Temp.TransferExperiment
 
 For example:
 
