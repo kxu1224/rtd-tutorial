@@ -26,7 +26,7 @@ ApplyExperiment
 For example:
 
 >>> # running application on case study BRCASubtype
->>> ApplyExperiment(path = "../Case/BRCASubtype/", dataname = "BRCASubtypeSel", apply_log = True, 
+>>> ApplyExperiment(path = "../Case/BRCASubtype/", dataname = "BRCASubtypeSel_train", apply_log = True, 
 >>>                new_size = [1000], model = "WGANGP" , batch_frac = 0.1, 
 >>>                learning_rate = 0.0005, epoch = 10, early_stop_num = 30, 
 >>>                off_aug = None, AE_head_num = 2, Gaussian_head_num = 9, 
