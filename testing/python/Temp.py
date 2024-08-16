@@ -137,6 +137,12 @@ def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos
             the data generated from ApplyExperiment
     dat_real: pd.DataFrame
             the original copy of the data
+    groups_generated : pd.Series
+            the groups generated
+    groups_real : pd.Series
+            the real groups
+    legend_pos : string
+            legend location
     
     """
     print("umap")
