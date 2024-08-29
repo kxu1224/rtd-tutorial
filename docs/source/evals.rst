@@ -18,7 +18,22 @@ UMAP
 
 .. _evaluation:
 
-Evaluation
+Classifier Evaluation
 ----------------
 
-.. autofunction:: testing.python.Temp.evaluation
+.. autofunction:: testing.python.Temp.eval_classifier
+
+.. _vis:
+
+Classifier Visualization
+------------
+
+.. autofunction:: testing.python.Temp.vis_classifier
+
+
+.. _fitcurve:
+
+Fit Curve
+------------
+
+.. autofunction:: testing.python.Temp.fit_curve
