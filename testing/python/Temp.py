@@ -133,7 +133,7 @@ def LOGIS(train_data, train_labels, test_data, test_labels):
     return None
 
 def SVM(train_data, train_labels, test_data, test_labels):
-    r"""This is a Support Vector Machine classifier
+    r"""This is a Support Vector Machine classifier.
 
     Parameters
     -----------
@@ -152,7 +152,7 @@ def SVM(train_data, train_labels, test_data, test_labels):
 
 
 def KNN(train_data, train_labels, test_data, test_labels):
-    r"""This is a K-Nearest Neighbor classifier with k = 20
+    r"""This is a K-Nearest Neighbor classifier with k = 20.
 
     Parameters
     -----------
@@ -170,7 +170,7 @@ def KNN(train_data, train_labels, test_data, test_labels):
     return None
 
 def RF(train_data, train_labels, test_data, test_labels):
-    r"""This is a Random Forest classifier
+    r"""This is a Random Forest classifier.
 
     Parameters
     -----------
@@ -216,7 +216,7 @@ def XGB(train_data, train_labels, test_data, test_labels):
 
 def heatmap_eval(dat_generated, dat_real):
     r"""
-    This function creates a heatmap visualization comparing the generated data and the real data
+    This function creates a heatmap visualization comparing the generated data and the real data.
 
     Parameters
     -----------
@@ -231,7 +231,7 @@ def heatmap_eval(dat_generated, dat_real):
 
 def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos="top"):
     r"""
-    This function creates a UMAP visualization comparing the generated data and the real data
+    This function creates a UMAP visualization comparing the generated data and the real data.
 
     Parameters
     -----------
@@ -252,7 +252,7 @@ def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos
 
 def eval_classifier(whole_generated, whole_groups, n_candidate, n_draw=5, log=True):
     r"""
-    This method assesses the classifiers’ performance based on classification accuracy computed through 5-fold cross-validation
+    This method assesses the classifiers’ performance based on classification accuracy computed through 5-fold cross-validation.
 
     Parameters
     -----------
