@@ -276,6 +276,24 @@ def eval_classifier(whole_generated, whole_groups, n_candidate, n_draw=5, log=Tr
 def fit_curve(acc_table, metric_name, n_target=None, plot=True, ax=None, annotation=("Metric", "")):
     r"""
     
+    This uses the inverse power law function (IPLF) to accurately fit augmented data corresponding to different sample sizes and their respective prediction accuracies.
+    This method is used within vis_classifier.
+    
+    Parameters
+    -----------
+    acc_table : pd.DataFrame
+            table of accuracy results
+    metric_name: string
+            metric to use for fitting
+    n_target: int, optional
+            number of targets to fit the learning curve
+    plot : boolean, optional
+            option to plot graph
+    ax : list, optional
+            specifications to plot graph
+    annotation : tuple(string), optional
+            optional labeling to add to the graph
+
     
     """
 
