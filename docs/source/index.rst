@@ -1,7 +1,9 @@
 Welcome to SyntheSize documentation!
 ===================================
 
-**SyntheSize** SyntheSize is a classification and visualization tool for 
+**SyntheSize** SyntheSize is a supervised learning framework designed for determining the optimal sample size by utilizing synthesized data across various sample sizes. 
+This framework employs the inverse power law function (IPLF) to accurately fit augmented data corresponding to different sample sizes and their respective prediction accuracies. 
+SyntheSize also illustrates the generated results through heatmap and UMAP(Uniform Manifold Approximation and Projection).
 
 More information can be found in this `Github repository <https://github.com/LXQin/SyntheSize>`_.
 
