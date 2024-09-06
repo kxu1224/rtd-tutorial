@@ -114,8 +114,7 @@
 
 
 def LOGIS(train_data, train_labels, test_data, test_labels):
-    r"""This is an L1 or Lasso regression classifier. The 'liblinear' solver is used because it is recommended for small datasets and L1 penalty.
-    Cs represents the inverse of regularization strength and is set to 10; smaller values specify stronger regularization.
+    r"""This is an L1 or Lasso regression classifier.
     
     Parameters
     -----------
@@ -152,7 +151,7 @@ def SVM(train_data, train_labels, test_data, test_labels):
 
 
 def KNN(train_data, train_labels, test_data, test_labels):
-    r"""This is a K-Nearest Neighbor classifier with k = 20.
+    r"""This is a K-Nearest Neighbor classifier.
 
     Parameters
     -----------
@@ -189,12 +188,6 @@ def RF(train_data, train_labels, test_data, test_labels):
 
 def XGB(train_data, train_labels, test_data, test_labels):
     r"""This is an XGBoost classifier. 
-    
-    In the paper XGBoost is done with 25 rounds for miRNA data and 10 rounds for RNA data. For RNA-
-    seq data, specific XGBoost parameters were adjusted: the learning rate was set to 0.1, the maximum depth
-    of a tree was set to 3, and the minimum sum of instance weight (hessian) needed in a child was set to 3;
-    other training parameters were kept at their default values.
-
 
     Parameters
     -----------
@@ -221,7 +214,7 @@ def heatmap_eval(dat_generated, dat_real):
     Parameters
     -----------
     dat_generated : pd.DataFrame
-            the data generated from ApplyExperiment
+            the generated data
     dat_real: pd.DataFrame
             the original copy of the data
     
@@ -236,7 +229,7 @@ def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos
     Parameters
     -----------
     dat_generated : pd.DataFrame
-            the data generated from ApplyExperiment
+            the generated data
     dat_real: pd.DataFrame
             the original copy of the data
     groups_generated : pd.Series
@@ -252,20 +245,20 @@ def UMAP_eval(dat_generated, dat_real, groups_generated, groups_real, legend_pos
 
 def eval_classifier(whole_generated, whole_groups, n_candidate, n_draw=5, log=True):
     r"""
-    This method assesses the classifiers’ performance based on classification accuracy computed through 5-fold cross-validation.
+    This function assesses the classifiers’ accuracy through 5-fold cross-validation for several candidate sample sizes. For each classifier and each candidate sample size, n_draw random sample will be taken from the whole_generated data to train the classifier. The final accuracy will be average accuracy over the random draws. The output will be used to fit the IPLF.
 
     Parameters
     -----------
     whole_generated : pd.DataFrame
             the entire set of generated data
     whole_groups: pd.DataFrame
-            all the available groups
+            the group labels for the whole_generated data
     n_candidate : int
-            the number of candidates
+            the candidate total sample sizes, half of them for each group label, should be smaller than the size of the whole generated data
     n_draw : int, optional
-            the number of cross-validations
+            the number of times drawing n_candidate from the whole_generated
     log : boolean, optional
-            option to take log of the data
+            whether the data is log2 transformed
 
 
     """
@@ -302,16 +295,17 @@ def fit_curve(acc_table, metric_name, n_target=None, plot=True, ax=None, annotat
 
 
 def vis_classifier(metric_real, n_target, metric_generated = None):
-    r""" Method to visualize the classification results for both real and generated data.
+    r""" 
+    This function visualizes the IPLF fitted from the real samples (if provided) and the generated samples. 
     
     Parameters
     -----------
     metric_real : pd.DataFrame
-            real dataset values
+            the metrics including candidate sample size and average accuracy for the fitting of IPLF. Usually be the output from the eval_classifers applied to the real data
     n_target: int
-            number of targets to fit the learning curve
+            the sample sizes beyond the range of the candidate sample sizes, where the classification accuracy at these sample sizes will be predicted based on the fitted IPLF.
     metric_generated : pd.DataFrame, optional
-            generated dataset values
+           the metrics including candidate sample size and average accuracy for the fitting of IPLF. Usually be the output from the eval_classifers applied to the generated data
     
     
     """

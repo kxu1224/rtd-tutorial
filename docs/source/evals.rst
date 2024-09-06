@@ -29,11 +29,3 @@ Classifier Visualization
 ------------
 
 .. autofunction:: testing.python.Temp.vis_classifier
-
-
-.. _fitcurve:
-
-Fit Curve
-------------
-
-.. autofunction:: testing.python.Temp.fit_curve
