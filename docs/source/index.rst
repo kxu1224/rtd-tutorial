@@ -23,3 +23,4 @@ Contents
    methods
    evals
    datasets
+   ../../testing/python/synthesize.ipynb
