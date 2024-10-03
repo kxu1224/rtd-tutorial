@@ -14,7 +14,7 @@ Logistic Regression
 Support Vector Machine
 ----------------
 
-.. autofunction:: testing.python.Temp.SVM
+.. autofunction:: testing.python.tools.SVM
 
 
 .. _knn:
@@ -22,7 +22,7 @@ Support Vector Machine
 K-Nearest Neighbors
 ----------------
 
-.. autofunction:: testing.python.Temp.KNN
+.. autofunction:: testing.python.tools.KNN
 
 
 
@@ -31,7 +31,7 @@ K-Nearest Neighbors
 Random Forest
 ------------
 
-.. autofunction:: testing.python.Temp.RF
+.. autofunction:: testing.python.tools.RF
 
 
 
@@ -40,7 +40,7 @@ Random Forest
 XGBoost
 ------------
 
-.. autofunction:: testing.python.Temp.XGB
+.. autofunction:: testing.python.tools.XGB
 
 
 
