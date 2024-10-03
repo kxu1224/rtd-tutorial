@@ -6,7 +6,7 @@ Classification Methods
 Logistic Regression
 ------------
 
-.. autofunction:: testing.python.Temp.LOGIS
+.. autofunction:: testing.python.tools.LOGIS
 
 
 .. _svm:
